@@ -4,3 +4,9 @@ Date/Time: 30/11/22, 6:00 PM
 -> Discuessed the last phase of project
 -> Did someresearch on different topics
 -------------------------------------------
+
+Date/Time: 3/11/22, 5:30 PM 
+
+-> Discussed data pipeline testing
+-> Discussed hardhat testing
+-------------------------------------------
