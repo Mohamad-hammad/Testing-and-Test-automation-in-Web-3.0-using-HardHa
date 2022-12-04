@@ -10,3 +10,11 @@ Date/Time: 3/11/22, 5:30 PM
 -> Discussed data pipeline testing
 -> Discussed hardhat testing
 -------------------------------------------
+
+Date/Time: 4/11/22, 1:00 PM 
+
+-> Discussed hardhat testing
+-> Learned how to create smart contracts
+-> Discussed different test scenarios
+-> Automated some tests.
+-------------------------------------------
