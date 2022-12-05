@@ -33,7 +33,43 @@ describe('Token contract', () => {
             expect(addr2Balance).to.equal(50);
 
 
-        });       
+        });
+
+        it('Should fail if sender does not have enough tokens',async()=>{
+            const initialOwnerBalance = await token.balanceOf(owner.address);
+
+            await expect(
+                token
+                    .connect(addr1)
+                    .transfer(owner.address, 1)
+            )
+                .to
+                .be
+                .revertedWith('Not enough tokens');
+
+            expect(
+                await token.balanceOf(owner.address)
+            )
+                .to
+                .equal(initialOwnerBalance);
+        });
+
+        it('Should update balance after transfers', async () =>{
+            const initialOwnerBalance = await token.balanceOf(owner.address);
+
+            await token.transfer(addr1.address, 100);
+            await token.transfer(addr2.address, 50);
+            
+            const finalOwnerBalance = await token.balanceOf(owner.address);
+            expect(finalOwnerBalance).to.equal(initialOwnerBalance-150);
+
+            const addr1balance = await token.balanceOf(addr1.address);
+            expect(addr1balance).to.equal(100);
+
+            const addr2balance = await token.balanceOf(addr2.address);
+            expect(addr2balance).to.equal(50);
+
+        })
 
     });
 
