@@ -11,10 +11,10 @@ The contracts are developed using solidity and test cases are written using js. 
 
 Typical steps to follow for developing your own hardhat project
 Steps to follow:
-Write smart contract using solidity
-Compile the contract using hardhat runner.
-Write tests
-Deploy the contract on live Network
+1. Write smart contract using solidity
+2. Compile the contract using hardhat runner.
+3. Write tests
+4. Deploy the contract on live Network
 
 The setup process of hardhat was pretty simple and straightforward. We can easily download the hardhat package using npm and start writing our contract or test cases. 
 After developing the contract you can easily write test cases and also deploy it to a live network. It's not the actual network but a network specifically directed to test the contract before final deployment.
